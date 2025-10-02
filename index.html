@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Cotizaciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Cotizaciones</h1>
+
+    <form id="cotizacionForm">
+      <label>Nombre de la Cotización:</label>
+      <input type="text" id="nombreCotizacion" placeholder="Ej: Cotización Juanitas Lechona" required>
+
+      <h2>Agregar Producto</h2>
+      <input type="text" id="nombreProducto" placeholder="Nombre del producto" required>
+      <input type="text" id="descripcionProducto" placeholder="Descripción">
+      <input type="number" id="precioProducto" placeholder="Precio" required>
+      <input type="url" id="imagenProducto" placeholder="URL de la imagen (postimg, imgur, etc.)">
+
+      <button type="button" onclick="agregarProducto()">➕ Agregar Producto</button>
+    </form>
+
+    <h2>Productos en la Cotización</h2>
+    <div id="listaProductos"></div>
+
+    <button id="exportarBtn" onclick="exportarHTML()">📄 Exportar Cotización</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
